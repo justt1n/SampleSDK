@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "13895315933",
+    "firebase_url": "https://stickheroindiez-default-rtdb.firebaseio.com",
+    "project_id": "stickheroindiez",
+    "storage_bucket": "stickheroindiez.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13895315933:android:33081831fb6837b92c4634",
+        "android_client_info": {
+          "package_name": "com.justt1n.SDK"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13895315933-nuj7k0q251me5q6ohouoqk14f9ndgvij.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZpf1fgC_yJ04uUWaGO0G8wVl1TKwT3P4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13895315933-nuj7k0q251me5q6ohouoqk14f9ndgvij.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
