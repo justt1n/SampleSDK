@@ -23,13 +23,15 @@
     <package>com.google.firebase:firebase-database:20.2.2</package>
     <package>com.google.firebase:firebase-database-unity:11.2.0</package>
     <package>com.google.firebase:firebase-messaging:21.0.0</package>
+    <package>com.ironsource.adapters:unityadsadapter:4.3.31</package>
     <package>com.ironsource.sdk:mediationsdk:7.3.1.1</package>
     <package>com.parse.bolts:bolts-android:1.4.0</package>
+    <package>com.unity3d.ads:unity-ads:4.8.0</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/androidx.activity.activity-1.2.0.aar</file>
     <file>Assets/Plugins/Android/androidx.annotation.annotation-1.5.0.jar</file>
-    <file>Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.annotation.annotation-experimental-1.3.0.aar</file>
     <file>Assets/Plugins/Android/androidx.appcompat.appcompat-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.appcompat.appcompat-resources-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.arch.core.core-common-2.1.0.jar</file>
@@ -40,8 +42,8 @@
     <file>Assets/Plugins/Android/androidx.collection.collection-1.1.0.jar</file>
     <file>Assets/Plugins/Android/androidx.concurrent.concurrent-futures-1.1.0.jar</file>
     <file>Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.core.core-1.3.2.aar</file>
-    <file>Assets/Plugins/Android/androidx.core.core-ktx-1.3.2.aar</file>
+    <file>Assets/Plugins/Android/androidx.core.core-1.9.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.core.core-ktx-1.9.0.aar</file>
     <file>Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.customview.customview-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.documentfile.documentfile-1.0.0.aar</file>
@@ -51,10 +53,11 @@
     <file>Assets/Plugins/Android/androidx.legacy.legacy-support-core-ui-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.legacy.legacy-support-core-utils-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.legacy.legacy-support-v4-1.0.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.3.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-common-2.5.1.jar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-2.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-livedata-core-2.3.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.3.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-process-2.5.1.aar</file>
+    <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-runtime-2.5.1.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-2.3.0.aar</file>
     <file>Assets/Plugins/Android/androidx.lifecycle.lifecycle-viewmodel-savedstate-2.3.0.aar</file>
     <file>Assets/Plugins/Android/androidx.loader.loader-1.0.0.aar</file>
@@ -63,12 +66,14 @@
     <file>Assets/Plugins/Android/androidx.print.print-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.savedstate.savedstate-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.slidingpanelayout.slidingpanelayout-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.startup.startup-runtime-1.1.1.aar</file>
     <file>Assets/Plugins/Android/androidx.swiperefreshlayout.swiperefreshlayout-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.tracing.tracing-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-1.1.0.aar</file>
     <file>Assets/Plugins/Android/androidx.vectordrawable.vectordrawable-animated-1.1.0.aar</file>
-    <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/androidx.webkit.webkit-1.6.1.aar</file>
     <file>Assets/Plugins/Android/com.android.installreferrer.installreferrer-2.1.aar</file>
     <file>Assets/Plugins/Android/com.facebook.android.facebook-applinks-16.1.3.aar</file>
     <file>Assets/Plugins/Android/com.facebook.android.facebook-bolts-16.1.3.aar</file>
@@ -85,6 +90,7 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-base-18.2.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-basement-18.1.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-cloud-messaging-16.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.google.android.gms.play-services-cronet-18.0.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-21.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-api-21.3.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-base-21.3.0.aar</file>
@@ -120,18 +126,23 @@
     <file>Assets/Plugins/Android/com.google.firebase.firebase-messaging-21.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.guava.listenablefuture-1.0.jar</file>
     <file>Assets/Plugins/Android/com.google.zxing.core-3.3.3.jar</file>
+    <file>Assets/Plugins/Android/com.ironsource.adapters.unityadsadapter-4.3.31.aar</file>
     <file>Assets/Plugins/Android/com.ironsource.sdk.mediationsdk-7.3.1.1.aar</file>
     <file>Assets/Plugins/Android/com.parse.bolts.bolts-android-1.4.0.jar</file>
     <file>Assets/Plugins/Android/com.parse.bolts.bolts-applinks-1.4.0.jar</file>
     <file>Assets/Plugins/Android/com.parse.bolts.bolts-tasks-1.4.0.jar</file>
+    <file>Assets/Plugins/Android/com.squareup.okhttp3.okhttp-3.12.13.jar</file>
+    <file>Assets/Plugins/Android/com.squareup.okio.okio-1.15.0.jar</file>
+    <file>Assets/Plugins/Android/com.unity3d.ads.unity-ads-4.8.0.aar</file>
     <file>Assets/Plugins/Android/javax.inject.javax.inject-1.jar</file>
+    <file>Assets/Plugins/Android/org.chromium.net.cronet-api-72.3626.96.aar</file>
     <file>Assets/Plugins/Android/org.jetbrains.annotations-13.0.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-1.7.10.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-common-1.7.10.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.6.0.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.6.0.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlinx.kotlinx-coroutines-android-1.6.1.jar</file>
-    <file>Assets/Plugins/Android/org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm-1.6.1.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-1.8.10.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-common-1.8.10.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk7-1.8.10.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlin.kotlin-stdlib-jdk8-1.8.10.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlinx.kotlinx-coroutines-android-1.6.4.jar</file>
+    <file>Assets/Plugins/Android/org.jetbrains.kotlinx.kotlinx-coroutines-core-jvm-1.6.4.jar</file>
     <file>Assets/Plugins/Android/org.jetbrains.kotlinx.kotlinx-coroutines-play-services-1.6.1.jar</file>
   </files>
   <settings>

@@ -383,13 +383,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5426120306697607293, guid: dd209a45d5de047b0b06a63025724ffe, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531568019003039468, guid: dd209a45d5de047b0b06a63025724ffe, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8669472669355278638, guid: dd209a45d5de047b0b06a63025724ffe, type: 3}
       propertyPath: m_Name
       value: HomeUI
       objectReference: {fileID: 0}
     - target: {fileID: 8669472669355278638, guid: dd209a45d5de047b0b06a63025724ffe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -473,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5433050558596933759, guid: 08ba1d3ba217649b3abbdf8f4299cd5f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7542653773001049478, guid: 08ba1d3ba217649b3abbdf8f4299cd5f, type: 3}
       propertyPath: m_Enabled
@@ -1261,7 +1269,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1823485968}
         m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: SignOut
+        m_MethodName: ChangeName
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
