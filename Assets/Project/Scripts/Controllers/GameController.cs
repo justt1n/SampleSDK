@@ -65,7 +65,7 @@ public class GameController: MonoBehaviour
             UIController.UIManager.DeactiveUI(0);
             
             UIController.UIManager.ActiveUI(1);
-            UIController.UIManager.FetchUser();
+            FetchUser();
 
         }
         else
@@ -96,5 +96,15 @@ public class GameController: MonoBehaviour
         _authController.SignOut();
         UIController.UIManager.DeactiveUI(1);
         UIController.UIManager.ActiveUI(0);
+    }
+
+    public void FetchUser()
+    {
+        UIController.UIManager.homeUI.GetComponent<HomeUI>().FetchUserData();
+    }
+
+    public void ChangeName()
+    {
+        UIController.UIManager.homeUI.GetComponent<HomeUI>().ChangeName();
     }
 }

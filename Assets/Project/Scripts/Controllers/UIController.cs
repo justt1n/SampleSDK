@@ -59,10 +59,4 @@ public class UIController : MonoBehaviour
             //
         }
     }
-
-    public void FetchUser()
-    {
-        homeUI.GetComponent<HomeUI>().FetchUserData();
-    }
-
 }
