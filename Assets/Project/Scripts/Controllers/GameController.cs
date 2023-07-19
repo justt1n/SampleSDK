@@ -6,36 +6,41 @@ using TMPro;
 
 public class GameController: MonoBehaviour
 {
-    public TMP_InputField EmailInput;
-    public TMP_InputField PasswordInput;
+    
     public static GameController GM;
-
+    private int _state;
+    
+    
     private AuthController _authController;
-    // Start is called before the first frame update
+
     void Start()
     {
         _authController = new AuthController();
+        _state = 0;
         GM = this;
         DontDestroyOnLoad(this);
     }
 
 
-    public void DebugInput()
-    {
-        string email = EmailInput.text;
-        string password = PasswordInput.text;
-        Debug.Log("Username: " + email + "\n" + "Password: " + password);
-    }
+    //public void DebugInput()
+    //{
+    //    string email = EmailInput.text;
+    //    string password = PasswordInput.text;
+    //    Debug.Log("Username: " + email + "\n" + "Password: " + password);
+    //}
 
+    //state 0
     public void CreateAccount()
     {
-        string email = EmailInput.text;
-        string password = PasswordInput.text;
+        if (_state != 0) return;
+        string email = LoginUI.loginUI.EmailInput.text;
+        string password = LoginUI.loginUI.PasswordInput.text;
         _authController.CreateAccount(email, password, success =>
         {
             if (success)
             {
                 Debug.Log("Created");
+                
             }
             else
             {
@@ -44,26 +49,35 @@ public class GameController: MonoBehaviour
         });
     }
 
-    public void LoginWithEmail()
+    public async void LoginWithEmail()
     {
-        string email = EmailInput.text;
-        string password = PasswordInput.text;
-        _authController.LoginWithEmail(email, password, success =>
+        if (_state != 0) return;
+
+        string email = LoginUI.loginUI.EmailInput.text;
+        string password = LoginUI.loginUI.PasswordInput.text;
+
+        bool success = await _authController.LoginWithEmailAsync(email, password);
+
+        if (success)
         {
-            if (success)
-            {
-                Debug.Log("Login success");
-            }
-            else
-            {
-                Debug.Log("False to login!");
-            }
-        });
+            Debug.Log("Login success");
+
+            UIController.UIManager.DeactiveUI(0);
+            
+            UIController.UIManager.ActiveUI(1);
+            UIController.UIManager.FetchUser();
+
+        }
+        else
+        {
+            Debug.Log("Failed to login!");
+        }
     }
+
+
     public void LoginWithFacebook()
     {
-        string email = EmailInput.text;
-        string password = PasswordInput.text;
+        if (_state != 0) return;
         _authController.LoginWithFacebook(success =>
         {
             if (success)
@@ -75,5 +89,12 @@ public class GameController: MonoBehaviour
                 Debug.Log("False to login!");
             }
         });
+    }
+
+    public void SignOut()
+    {
+        _authController.SignOut();
+        UIController.UIManager.DeactiveUI(1);
+        UIController.UIManager.ActiveUI(0);
     }
 }

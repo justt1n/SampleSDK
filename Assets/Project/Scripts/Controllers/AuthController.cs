@@ -6,6 +6,7 @@ using Firebase;
 using System;
 using Facebook.Unity;
 using Firebase.Auth;
+using System.Threading.Tasks;
 
 public class AuthController
 {
@@ -63,7 +64,7 @@ public class AuthController
         });
     }
 
-    public void LoginWithEmail(string email, string password, Action<bool> callback)
+    public void LoginWithEmailAsync(string email, string password, Action<bool> callback)
     {
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
@@ -85,51 +86,30 @@ public class AuthController
         });
     }
 
-    public void LoginWithFacebook(Action<bool> callback)
+    public async Task<bool> LoginWithEmailAsync(string email, string password)
     {
-        var perms = new List<string>() { "public_profile", "email" };
-        
-        FB.LogInWithReadPermissions(perms, AuthCallback =>
+        try
         {
-            if (FB.IsLoggedIn)
-            {
-                // AccessToken class will have session details
-                var aToken = Facebook.Unity.AccessToken.CurrentAccessToken;
-                // Print current access token's User ID
-                Debug.Log(aToken.UserId);
-                // Print current access token's granted permissions
-                foreach (string perm in aToken.Permissions)
-                {
-                    Debug.Log(perm);
-                }
-            }
-            else
-            {
-                Debug.Log("User cancelled login");
-            }
-        });
-
-        
-        
-        Firebase.Auth.Credential credential =
-        Firebase.Auth.FacebookAuthProvider.GetCredential(Facebook.Unity.AccessToken.CurrentAccessToken.UserId);
-        auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWith(task => {
-            if (task.IsCanceled)
-            {
-                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");
-                return;
-            }
-            if (task.IsFaulted)
-            {
-                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync encountered an error: " + task.Exception);
-                return;
-            }
-
-            Firebase.Auth.AuthResult result = task.Result;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
-                result.User.DisplayName, result.User.UserId);
-        });
+            Firebase.Auth.AuthResult result = await auth.SignInWithEmailAndPasswordAsync(email, password);
+            Debug.LogFormat("User signed in successfully: {0} ({1})", result.User.DisplayName, result.User.UserId);
+            return true;
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + ex);
+            return false;
+        }
     }
 
-    
+
+    public void LoginWithFacebook(Action<bool> callback)
+    {
+        FacebookSDKController fbController = new FacebookSDKController();
+        fbController.LoginWithFacebook();
+    }
+
+    public void SignOut()
+    {
+        auth.SignOut();
+    }
 }
